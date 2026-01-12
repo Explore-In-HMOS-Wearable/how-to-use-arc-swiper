@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.hmosdemos.arcswiper",
+    "bundleName": "com.hmosdemos.wearable.how_to_use_arc_swiper",
     "vendor": "hmosdemos",
     "versionCode": 1000000,
     "versionName": "1.0.0",

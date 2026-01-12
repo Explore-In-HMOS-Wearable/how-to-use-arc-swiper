@@ -9,7 +9,8 @@ import {
 @Entry
 @Component
 struct SwiperCustomAnimationExample {
-  @State backgroundColors: Color[] = [Color.Green, Color.Blue, Color.Yellow, Color.Pink, Color.Gray, Color.Orange,Color.Red];
+  @State backgroundColors: Color[] =
+    [Color.Green, Color.Blue, Color.Yellow, Color.Pink, Color.Gray, Color.Orange, Color.Red];
   innerSelectedIndex: number = 0;
 
   build() {
@@ -22,7 +23,7 @@ struct SwiperCustomAnimationExample {
             .fontSize(50)
             .textAlign(TextAlign.Center)
             .backgroundColor(backgroundColor)
-        })
+        },(item: string, index: number) => item);
       }
       .onAnimationStart((index: number, targetIndex: number) => {
         this.innerSelectedIndex = targetIndex;
@@ -31,7 +32,7 @@ struct SwiperCustomAnimationExample {
         others: Array<GestureRecognizer>): GestureJudgeResult => {
         if (current) {
           let target = current.getEventTargetInfo();
-          if (target && current.isBuiltIn() && current.getType() == GestureControl.GestureType.PAN_GESTURE) {
+          if (target && current.isBuiltIn() && current.getType() === GestureControl.GestureType.PAN_GESTURE) {
             let swiperTarget = target as ScrollableTargetInfo;
             if (swiperTarget instanceof ScrollableTargetInfo &&
               (swiperTarget.isBegin() || this.innerSelectedIndex === 0)) {

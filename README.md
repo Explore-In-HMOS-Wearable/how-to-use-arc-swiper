@@ -59,6 +59,6 @@ entry/src/main/ets/
 
 # License
 
-**ArcSwiper** is distributed under the terms of the MIT License.
+**How to use ArcSwiper** is distributed under the terms of the MIT License.
 
 See the [LICENSE](/LICENSE) for more information.
